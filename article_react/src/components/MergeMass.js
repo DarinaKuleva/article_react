@@ -1,5 +1,3 @@
-
-
 export default function Merge() {
 
         let hash = {}
@@ -24,9 +22,6 @@ export default function Merge() {
         return result;
 
 }
-
-
-
 
 
 
