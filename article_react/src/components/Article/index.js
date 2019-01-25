@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import 'style.css'
 
 
 class Result extends Component {
@@ -17,23 +18,23 @@ class Result extends Component {
         const body_com = this.state.isOpen && <section><div>{result.autor}</div><div>{result.comment}</div></section>
         return (
             <div>
-                <div>
-                    <h2>{result.title}</h2>
-                </div>
-                <div>
-                    {body}
-                </div>
-                <h2>
-                    Комментарий
-                    <button onClick={this.handleClick}>
-                        {this.state.isOpen ? 'close' : 'open'}
-                    </button>
-                </h2>
-                <div>
-                    {body_com}
-                </div>
+            <div>
+            <h2 className="test">{result.title}</h2>
             </div>
-        )
+            <div>
+            {body}
+            </div>
+            <h2>
+            Комментарий
+            <button onClick={this.handleClick}>
+            {this.state.isOpen ? 'close' : 'open'}
+            </button>
+            </h2>
+            <div>
+            {body_com}
+            </div>
+            </div>
+    )
     }
 }
 
