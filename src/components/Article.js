@@ -1,8 +1,6 @@
-import React, {Component} from 'react'
-import 'style.css'
+import React, {PureComponent} from 'react'
 
-
-class Result extends Component {
+class Article extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -13,13 +11,13 @@ class Result extends Component {
         this.handleClick = handleClick.bind(this)
     }
     render() {
-        const {result} = this.props
-        const body = <section>{result.text}</section>
-        const body_com = this.state.isOpen && <section><div>{result.autor}</div><div>{result.comment}</div></section>
+        const {article} = this.props
+        const body = <section>{article.text}</section>
+        const body_com = this.state.isOpen && <section><div>{article.autor}</div><div>{article.comment}</div></section>
         return (
             <div>
             <div>
-            <h2 className="test">{result.title}</h2>
+            <h2 className="test">{article.title}</h2>
             </div>
             <div>
             {body}
@@ -46,4 +44,4 @@ function handleClick () {
 }
 
 
-export default Result
+export default Article

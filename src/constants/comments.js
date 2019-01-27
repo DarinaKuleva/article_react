@@ -1,4 +1,4 @@
-const ArrayComments = [
+const comments = [
     {
         "id": "4",
         "comment": "удовлетворительно id 4",
@@ -21,4 +21,4 @@ const ArrayComments = [
     }
 ]
 
-export default ArrayComments
+export default comments

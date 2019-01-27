@@ -1,4 +1,4 @@
-const ArrayArticle = [
+const articles = [
     {
         "id": "4",
         "title": "Петя",
@@ -21,4 +21,4 @@ const ArrayArticle = [
     }
 ]
 
-export default ArrayArticle
+export default articles
