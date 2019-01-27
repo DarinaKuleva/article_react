@@ -20,5 +20,4 @@ export default function Merge() {
             if (hash.hasOwnProperty(id)) result.push(hash[id]);
         }
         return result;
-
 }
