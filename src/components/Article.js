@@ -4,7 +4,7 @@ import comments from '../constants/comments'
 let CheckComments = id => {
     let CommentArr = [];
     comments.forEach(function(comment) {
-        if (comment.artcile === id)
+        if (comment.article_id === id)
             CommentArr.push(
                 <li key={comment.id}>
                     <section>
