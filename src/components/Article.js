@@ -1,4 +1,21 @@
 import React, {PureComponent} from 'react'
+import comments from '../constants/comments'
+
+let CheckComments = id => {
+    let CommentArr = [];
+    comments.forEach(function(comment) {
+        if (comment.artcile === id)
+            CommentArr.push(
+                <li key={comment.id}>
+                    <section>
+                        <h2> {comment.autor}</h2>
+                        <p>{comment.comment} </p>
+                    </section>
+                </li>)
+    })
+
+    return <ul>{CommentArr}</ul>
+}
 
 class Article extends PureComponent {
 
@@ -11,7 +28,7 @@ class Article extends PureComponent {
         return (
             <div>
                 <div>
-                    <h2 className="test">{article.title}</h2>
+                    <h2>{article.title}</h2>
                 </div>
                 <div>
                     <section>{article.text}</section>
@@ -23,24 +40,20 @@ class Article extends PureComponent {
                     </button>
                 </h2>
                 <div>
-                    {this.state.isOpen &&
+                        {this.state.isOpen &&
                             <section>
-                                <div>{article.autor}</div>
-                                <div>{article.comment}</div>
+                              {CheckComments(article.id)}
                             </section>}
                 </div>
             </div>
     )
     }
 
-    handleClick = () => {
+    handleClick = (setState) => {
         this.setState (
-            {
-                isOpen: !this.state.isOpen
-            }
+            {isOpen: !this.state.isOpen}
         )
     }
 }
 
 export default Article
-
