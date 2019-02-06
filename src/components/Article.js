@@ -40,10 +40,11 @@ class Article extends PureComponent {
                     </button>
                 </h2>
                 <div>
-                        {this.state.isOpen &&
-                            <section>
-                              {CheckComments(article.id)}
-                            </section>}
+                    {this.state.isOpen &&
+                        <section>
+                            {CheckComments(article.id)}
+                        </section>
+                    }
                 </div>
             </div>
     )
