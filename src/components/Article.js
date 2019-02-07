@@ -1,12 +1,15 @@
 import React, {PureComponent} from 'react'
 import comments from '../constants/comments'
 
+import button from '../styles/btn.module.css'
+import feedbeak from '../styles/article-list.module.css'
+
 let CheckComments = id => {
     let CommentArr = [];
     comments.forEach(function(comment) {
         if (comment.article_id === id)
             CommentArr.push(
-                <li key={comment.id}>
+                <li key={comment.id} className={feedbeak.comments}>
                     <section>
                         <h2> {comment.autor}</h2>
                         <p>{comment.comment} </p>
@@ -27,21 +30,20 @@ class Article extends PureComponent {
         const {article} = this.props
         return (
             <div>
-                <div>
-                    <h2>{article.title}</h2>
-                </div>
-                <div>
-                    <section>{article.text}</section>
-                </div>
-                <h2>
-                    Комментарий
-                    <button onClick={this.handleClick}>
-                        {this.state.isOpen ? 'close' : 'open'}
+                <section>
+                    <div>
+                        <h2 className={feedbeak.autor}>{article.title}</h2>
+                    </div>
+                    <div>
+                        <section className={feedbeak.article}>{article.text}</section>
+                    </div>
+                </section>
+                    <button onClick={this.handleClick} className={button.red}>
+                        {this.state.isOpen ? 'скрыть комментарии' : 'показать комментарии'}
                     </button>
-                </h2>
                 <div>
                     {this.state.isOpen &&
-                        <section>
+                        <section >
                             {CheckComments(article.id)}
                         </section>
                     }

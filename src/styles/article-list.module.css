@@ -1,0 +1,68 @@
+.item {
+    text-align: justify;
+    position: relative;
+    margin-bottom: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: #041e42;
+    right: -10px;
+    bottom: -60px;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 1px;
+    background-color: #041e42;
+    right: -10px;
+    bottom: -60px;
+}
+
+.list {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.autor {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+}
+
+.autor::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: #041e42;
+    left: -35px;
+    top: -20px;
+}
+
+.autor::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 1px;
+    background-color: #041e42;
+    left: -35px;
+    top: -20px;
+}
+
+.article {
+    color: #041e42;
+    text-indent: 1.5em;
+}
+
+.comments {
+    display: flex;
+    margin: 0;
+}

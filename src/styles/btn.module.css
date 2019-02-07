@@ -1,0 +1,29 @@
+.red {
+    margin-top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: relative;
+    padding: 7px 10px;
+    float: left;
+    font-family: 'Pacifico', cursive;
+    font-size: 14px;
+    width: 200px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #041e42;
+    border: none;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    outline: none;
+    cursor: pointer;
+}
+
+.red:hover {
+    outline: none;
+}
+
+.red:active {
+    outline: none;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+}

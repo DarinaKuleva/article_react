@@ -1,0 +1,32 @@
+.title {
+    text-align: center;
+    margin: 0;
+    font-size: 48px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-weight: 100;
+    position: relative;
+    cursor: default;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: 157px;
+    height: 1px;
+    background-color: #041e42;
+    right: 38%;
+    top: -10px;
+    opacity: 0.5;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 1px;
+    background-color: #041e42;
+    left: 38%;
+    bottom: -20px;
+    opacity: 0.5;
+}
