@@ -1,13 +1,12 @@
-.red {
+.close {
     margin-top: 20px;
     left: 50%;
     margin-left: -100px;
     position: relative;
     padding: 7px 10px;
-    float: left;
-    font-family: 'Pacifico', cursive;
     font-size: 14px;
-    width: 200px;
+    text-transform: uppercase;
+    width: 210px;
     color: #FFF;
     text-decoration: none;
     background-color: #041e42;
@@ -18,11 +17,42 @@
     cursor: pointer;
 }
 
-.red:hover {
-    outline: none;
+.close:hover {
+    color: #000;
+    background-color: #c5d3ea;
 }
 
-.red:active {
+.close:active {
+    outline: none;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+}
+
+.open {
+    position: absolute;
+    left: 50%;
+    margin-left: -105px;
+    bottom: -60px;
+    padding: 7px 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 210px;
+    color: #000;
+    text-decoration: none;
+    background-color: #c5d3ea;
+    border: none;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    outline: none;
+    cursor: pointer;
+}
+
+.open:hover {
+    color: #fff;
+    background-color: #041e42;
+}
+
+.open:active {
     outline: none;
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);

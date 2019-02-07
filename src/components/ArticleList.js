@@ -1,17 +1,17 @@
 import React from 'react'
 import Article from './Article'
 
-import feedbeak from '../styles/article-list.module.css'
+import paper from '../styles/article-list.module.css'
 
 let ArticleList = ({articles}) => {
     const articleElements = articles.map((article) =>
-        <li key={article.id} className={feedbeak.item}>
+        <li key={article.id} className={paper.item}>
             <Article article={article}/>
         </li>
     )
 
     return (
-        <ul className={feedbeak.list}>
+        <ul className={paper.list}>
             {articleElements}
         </ul>
     )
