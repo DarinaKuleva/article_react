@@ -38,7 +38,7 @@ class Article extends PureComponent {
 
     render() {
         const {article} = this.props
-        const { hovered } = this.state;
+        const {hovered} = this.state;
         const hover_autor = hovered ? { backgroundColor: "#c5d3ea", color: "#041e42" } : {};
         return (
             <div>
